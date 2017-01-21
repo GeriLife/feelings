@@ -1,5 +1,9 @@
+import Feelings from '/feelings/collection';
+
 Template.feelings.events({
   'click .feeling' (event, templateInstance) {
-    console.log(event.currentTarget.id);
+    const feeling = event.currentTarget.id;
+
+    Feelings.insert({ feeling });
   }
 });
