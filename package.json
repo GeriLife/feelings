@@ -5,7 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0",
-    "babel-runtime": "6.18.0"
+    "babel-runtime": "6.18.0",
+    "lodash": "^4.17.4",
+    "meteor-node-stubs": "~0.2.0"
   }
 }
