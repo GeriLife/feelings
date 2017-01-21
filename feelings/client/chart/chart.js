@@ -37,7 +37,7 @@ Template.feelingsChart.onRendered(function () {
           chart_type: 'bar',
           x_accessor: 'value',
           y_accessor: 'key',
-          height:600,
+          height:300,
           width:400,
           target: '#feelingsChart',
         });
