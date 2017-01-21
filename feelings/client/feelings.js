@@ -1,4 +1,4 @@
-import Feelings from '/feelings/collection';
+import { Feelings } from '/feelings/collection';
 
 Template.feelings.events({
   'click .feeling' (event, templateInstance) {

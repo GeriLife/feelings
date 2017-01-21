@@ -1,4 +1,4 @@
-import Feelings from './';
+import { Feelings } from './';
 
 Feelings.allow({
   insert () {
