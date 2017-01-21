@@ -20,11 +20,11 @@ Template.feelings.events({
 
     // Count down from countdown lengh to zero
     // Each second ...
-    setInterval(function () {
-      if (timer >= 0) {
+    let countdown = setInterval(function () {
+      if (timer > 0) {
         // Decrement the timer
         timer--;
-        
+
         // Set the countdown reactive variable
         templateInstance.countdown.set(timer);
       }
