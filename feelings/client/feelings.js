@@ -12,8 +12,23 @@ Template.feelings.onCreated(function () {
 
 Template.feelings.events({
   'click .feeling' (event, templateInstance) {
+    // Get countdown length
+    let timer = templateInstance.countdownLength;
+
     // Set countdown reactive variable to countdown throttle length
-    templateInstance.countdown.set(templateInstance.countdownLength);
+    templateInstance.countdown.set(timer);
+
+    // Count down from countdown lengh to zero
+    // Each second ...
+    setInterval(function () {
+      if (timer >= 0) {
+        // Decrement the timer
+        timer--;
+        
+        // Set the countdown reactive variable
+        templateInstance.countdown.set(timer);
+      }
+    }, 1000);
   }
 });
 
