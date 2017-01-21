@@ -1,3 +1,18 @@
 <template name="feelings">
-  {{> feelingSelect }}
+  {{# unless countdown }}
+    {{> feelingSelect }}
+  {{ else }}
+    <div class="panel panel-default">
+      <div class="media">
+        <div class="media-left">
+          <img class="media-object" src="/images/unicorn.png" alt="Thank you unicorn">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Thank you!</h4>
+          <p>We appreciate your feedback.</p>
+        </div>
+      </div>
+    </div>
+    <p class="pull-right text-muted">{{ countdown }}</p>
+  {{/ unless }}
 </template>
