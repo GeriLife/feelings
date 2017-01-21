@@ -4,13 +4,25 @@
 
 <body>
   <div class="container">
-    {{> feelings }}
-
-    {{> feelingsChart }}
+    {{# unless viewResults }}
+      {{> feelings }}
+    {{ else }}
+      {{> feelingsChart }}
+    {{/ unless }}
   </div>
+
   <footer class="navbar navbar-fixed-bottom">
     <div class="container">
-      <button type="button" class="btn btn-default navbar-btn">Show results</button>
+      {{# unless viewResults }}
+        <button type="button" id="view-results" class="btn btn-default navbar-btn">
+          View results
+        </button>
+      {{ else }}
+      <button type="button" id="view-emotion-select" class="btn btn-default navbar-btn">
+        Back to emotion select
+      </button>
+      {{/ unless }}
+
       <p class="pull-right text-muted">
         <img src="/images/osi_keyhole_100X100_90ppi.png" alt="Open Source Initiative logo" width="33px">
         Open source by <a href="https://github.com/GeriLife/feelings">GeriLife</a>.
