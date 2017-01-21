@@ -1,7 +1,7 @@
 import { Feelings } from '/feelings/collection';
 import d3 from 'd3';
 
-Template.feelingsChart.onCreated(function () {
+Template.results.onCreated(function () {
   // Get reference to template instance
   const instance = this;
 
@@ -9,7 +9,7 @@ Template.feelingsChart.onCreated(function () {
   instance.subscribe('allFeelings');
 })
 
-Template.feelingsChart.onRendered(function () {
+Template.results.onRendered(function () {
   // Get reference to template instance
   const instance = this;
 
