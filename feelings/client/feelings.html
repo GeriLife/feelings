@@ -1,18 +1,32 @@
 <template name="feelings">
+  <div class="page-heading">
+    <h1 class="page-header">
+      How do you feel about our services?
+      <!-- {{_ "feelings-headerQuestion" }} -->
+    </h1>
+  </div>
   {{# unless countdown }}
     {{> feelingSelect }}
   {{ else }}
     <div class="panel panel-default">
-      <div class="media">
-        <div class="media-left">
-          <img class="media-object" src="/images/unicorn.png" alt="Thank you unicorn">
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">Thank you!</h4>
-          <p>We appreciate your feedback.</p>
+      <div class="panel-body">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src="/images/unicorn.png" alt="Thank you unicorn">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              Thank you!
+            </h4>
+            <p>
+              We appreciate your feedback.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <p class="pull-right text-muted">{{ countdown }}</p>
+    <p class="pull-right text-muted">
+      {{ countdown }}
+    </p>
   {{/ unless }}
 </template>
